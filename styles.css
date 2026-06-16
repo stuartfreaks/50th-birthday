@@ -1,3 +1,7 @@
+/* ==========================================
+   GLOBAL
+========================================== */
+
 html {
   scroll-behavior: smooth;
 }
@@ -9,31 +13,30 @@ html {
 }
 
 body {
-  font-family: Georgia, serif;
+  font-family: Georgia, 'Times New Roman', serif;
   color: white;
-
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url('images/monforte-sunset.jpg');
-
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: #08121c;
 }
 
-/* Navigation */
+/* ==========================================
+   HEADER
+========================================== */
 
-.navbar {
+.site-header {
   position: fixed;
   top: 0;
+  left: 0;
+
   width: 100%;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 20px 60px;
-  background: rgba(10, 10, 10, 0.15);
+  padding: 28px 50px;
+
+  background: rgba(8, 18, 28, 0.55);
+
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 
@@ -41,133 +44,261 @@ body {
 }
 
 .logo {
-  font-size: 1.4rem;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
 }
 
-.nav-links {
-  list-style: none;
+.nav {
   display: flex;
-  gap: 35px;
+  gap: 40px;
 }
 
-.nav-links a {
-  text-decoration: none;
+.nav a {
   color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+
   transition: 0.3s;
 }
 
-.nav-links a:hover {
+.nav a:hover {
   color: #d8b15f;
 }
 
-/* Hero */
+/* ==========================================
+   HERO
+========================================== */
 
 .hero {
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   text-align: center;
-  padding: 20px;
+
+  position: relative;
+
+  background-image:
+    linear-gradient(rgba(5, 20, 35, 0.15), rgba(5, 20, 35, 0.25)),
+    url('images/Monforte.jpeg');
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .hero-content {
-  max-width: 900px;
+  max-width: 1000px;
+  padding: 120px 20px;
 }
 
 .hero h1 {
-  font-size: 5rem;
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: normal;
+
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
   margin-bottom: 20px;
 }
 
-.hero p {
-  font-size: 1.5rem;
-  line-height: 1.8;
-}
-
-.hero-button {
-  display: inline-block;
-
-  margin-top: 30px;
-  padding: 15px 30px;
+.gold-line {
+  width: 90px;
+  height: 2px;
 
   background: #d8b15f;
-  color: #222;
 
-  text-decoration: none;
-  border-radius: 6px;
-
-  font-weight: bold;
+  margin: 30px auto;
 }
 
-/* Sections */
-
-.section {
-  max-width: 1000px;
-
-  margin: 80px auto;
-  padding: 50px;
-
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(6px);
-
-  border-radius: 12px;
-}
-
-.section h2 {
+.location {
   color: #d8b15f;
-  font-size: 2.5rem;
+
+  text-transform: uppercase;
+  letter-spacing: 6px;
+
+  font-size: 1rem;
+
   margin-bottom: 30px;
 }
 
-.section h3 {
-  margin-top: 30px;
+.tagline {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+
+  font-style: italic;
+
+  line-height: 1.4;
+
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================
+   DATE BAR
+========================================== */
+
+.date-bar {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+
+  text-align: center;
+
+  padding: 25px;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  color: #d8b15f;
+
+  text-transform: uppercase;
+  letter-spacing: 4px;
+
+  font-size: 0.85rem;
+}
+
+.date-bar p {
+  margin: 6px 0;
+}
+
+/* ==========================================
+   MAIN CONTENT
+========================================== */
+
+main {
+  padding: 80px 20px;
+
+  background-image:
+    linear-gradient(rgba(8, 18, 28, 0.88), rgba(8, 18, 28, 0.94)),
+    url('images/Monforte.jpeg');
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ==========================================
+   CONTENT SECTIONS
+========================================== */
+
+.content-section {
+  max-width: 900px;
+
+  margin: 0 auto 60px;
+
+  padding: 50px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 14px;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.content-section h2 {
+  color: #d8b15f;
+
+  font-size: 2.5rem;
+
+  font-weight: normal;
+
+  margin-bottom: 30px;
+}
+
+.content-section h3 {
+  margin-top: 35px;
   margin-bottom: 15px;
+
+  font-size: 1.4rem;
 }
 
-.section p {
-  line-height: 1.8;
+.content-section p {
+  line-height: 1.9;
+
   margin-bottom: 20px;
+
+  font-size: 1.05rem;
 }
 
-.section a {
+.content-section a {
   color: #d8b15f;
 }
 
-.section ul {
-  margin-left: 20px;
-  line-height: 1.8;
+.content-section strong {
+  color: white;
 }
 
-/* Mobile */
+/* ==========================================
+   FOOTER
+========================================== */
 
-@media (max-width: 768px) {
-  .navbar {
+footer {
+  text-align: center;
+
+  padding: 40px;
+
+  background: #08121c;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  letter-spacing: 2px;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 800px) {
+  .site-header {
     flex-direction: column;
+
+    gap: 20px;
+
     padding: 20px;
-    gap: 15px;
   }
 
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .hero h1 {
-    font-size: 3rem;
-  }
-
-  .hero p {
+  .logo {
     font-size: 1.1rem;
   }
 
-  .section {
-    margin: 30px 15px;
-    padding: 30px;
+  .nav {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px;
+  }
+
+  .nav a {
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+  }
+
+  .location {
+    letter-spacing: 3px;
+
+    font-size: 0.85rem;
+  }
+
+  .content-section {
+    padding: 30px 25px;
+  }
+
+  .content-section h2 {
+    font-size: 2rem;
+  }
+
+  .date-bar {
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
   }
 }
