@@ -382,3 +382,12 @@ footer {
     transform: translateY(0);
   }
 }
+
+.packing-list {
+  margin: 20px 0 25px 25px;
+  line-height: 2;
+}
+
+.packing-list li {
+  margin-bottom: 6px;
+}
