@@ -345,3 +345,17 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================
+   VENUE LINKS
+========================================== */
+
+.venue-link {
+  color: #d8b15f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.venue-link:hover {
+  text-decoration: underline;
+}
