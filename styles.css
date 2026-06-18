@@ -74,24 +74,29 @@ body {
 ========================================== */
 
 .hero {
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  position: relative;
+
   background-image:
     linear-gradient(rgba(5, 20, 35, 0.15), rgba(5, 20, 35, 0.25)),
     url('images/Monforte.jpeg');
 
   background-size: cover;
+
   background-position: center;
+
   background-repeat: no-repeat;
-}
 
-@media (max-width: 800px) {
-  .hero {
-    background-attachment: scroll;
-    min-height: 100svh;
-  }
-
-  main {
-    background-attachment: scroll;
-  }
+  background-attachment: fixed;
 }
 .hero-content {
   max-width: 1000px;
@@ -99,41 +104,31 @@ body {
 }
 
 .hero h1 {
-  font-size: clamp(4rem, 10vw, 8rem);
+  font-size: clamp(4rem, 9vw, 7rem);
   font-weight: normal;
-
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-
   margin-bottom: 20px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
 }
 
 .gold-line {
   width: 90px;
   height: 2px;
-
   background: #d8b15f;
-
   margin: 30px auto;
 }
 
 .location {
   color: #d8b15f;
-
   text-transform: uppercase;
   letter-spacing: 6px;
-
   font-size: 1rem;
-
   margin-bottom: 30px;
 }
 
 .tagline {
   font-size: clamp(1.5rem, 3vw, 2.5rem);
-
   font-style: italic;
-
   line-height: 1.4;
-
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -390,4 +385,23 @@ footer {
 
 .packing-list li {
   margin-bottom: 6px;
+}
+
+/* ==========================================
+   HERO MEDIA QUERY
+========================================== */
+
+@media (max-width: 800px) {
+  .hero {
+    min-height: 100svh;
+    background-attachment: scroll;
+  }
+
+  .hero-content {
+    padding-top: 180px;
+  }
+
+  main {
+    background-attachment: scroll;
+  }
 }
